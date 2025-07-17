@@ -1,0 +1,116 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #0ff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 0 25px #0ff;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: neonBorder 5s infinite linear;
+}
+
+@keyframes neonBorder {
+    0% { box-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
+    50% { box-shadow: 0 0 30px #f0f, 0 0 60px #0ff; }
+    100% { box-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Styles */
+input,
+select,
+textarea {
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px #0ff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #f0f;
+    box-shadow: 0 0 15px #f0f;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: linear-gradient(45deg, #0ff, #f0f);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(45deg, #f0f, #0ff);
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #f0f, 0 0 30px #0ff;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0ff;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f0f;
+}
